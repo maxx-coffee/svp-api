@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Svp::VERSION
   s.authors     = ["Joshua Coffee"]
   s.email       = ["josh@epiclabs.com"]
-  s.homepage    = "epiclabs.com"
+  s.homepage    = "http://www.epiclabs.com"
   s.summary     = "API for streaming video provider"
   s.description = "API wrapper for SVP"
 
