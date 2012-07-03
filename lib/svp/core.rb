@@ -56,6 +56,10 @@ class Core
         return resp
       end
 
+      def get_stream(ref_no)
+        resp = get('svp_list_videos', :query => {:start_ref_no => ref_no, :end_ref_no =>ref_no})
+        return resp['response']['video_list']['video']['stream_name']
+      end
 
   	  def get(method, opts={})
   	  
