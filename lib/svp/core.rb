@@ -51,6 +51,11 @@ class Core
 
       end
 
+      def stop_broadcast(ref_no)
+        resp = get('svp_stop_broadcast', :query => {:video_ref => ref_no})
+        return resp
+      end
+
       def delete_video(ref_no)
         resp = get('svp_delete_video', :query => {:video_ref => ref_no})
         return resp
