@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ["josh@epiclabs.com"]
   s.homepage    = "epiclabs.com"
   s.summary     = "API for streaming video provider"
-  s.description = "TODO: Description of Svp."
+  s.description = "API wrapper for SVP"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
