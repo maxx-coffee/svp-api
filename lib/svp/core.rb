@@ -22,6 +22,13 @@ class Core
   	  	return response['response']['video_list']
   	  end	
 
+      def get_video(ref_no)
+        response = get('svp_list_videos', :query => {:ref_no => ref_no})
+        video_list =  response['response']['video_list']['video']
+        #result = video_list.select {|f| f["ref_no"] == ref_no }
+        return video_list
+      end
+
   	  def get_image(ref_no)
   	  	resp = get('svp_get_primary_video_image', :query => {:video_ref => ref_no})
         return resp
@@ -33,7 +40,15 @@ class Core
         return resp
       end
 
-      
+      def create_broadcast
+        resp = get('svp_broadcast_feed')
+        return resp
+      end
+
+      def start_broadcast(ref_no)
+        resp = get('svp_start_broadcast', :query => {:video_ref => ref_no})
+        return resp
+      end
 
 
   	  def get(method, opts={})
