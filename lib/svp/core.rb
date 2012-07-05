@@ -66,6 +66,16 @@ class Core
         return resp['response']['video_list']['video']['stream_name']
       end
 
+      def start_record(ref_no)
+        resp = get('svp_start_recording', :query => {:video_ref => ref_no})
+        return resp
+      end
+
+      def stop_record(ref_no)
+        resp = get('svp_stop_recording', :query => {:video_ref => ref_no})
+        return resp
+      end
+
   	  def get(method, opts={})
   	  
         opts[:query] ||= {}
