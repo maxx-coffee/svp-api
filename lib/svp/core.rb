@@ -67,7 +67,7 @@ class Core
       end
 
       def get_video_embed(ref_no)
-        resp = get('svp_get_player_code', :query =>{:video_ref => ref_no, :pause_on_start => "no", :video_prebuffer => "yes", :ratio => "16:9", :width => "900px"})
+        resp = get('svp_get_player_code', :query =>{:video_ref => ref_no, :pause_on_start => "no", :param_overrides => [:video_prebuffer => "yes", :ratio => "16:9", :width => "900px"] })
         return resp
       end
 
