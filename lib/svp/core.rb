@@ -36,7 +36,7 @@ class Core
   	  end
 
       def get_embed(ref_no)
-        resp = get('svp_get_player_code', :query => {:video_ref => ref_no, :embed_type => "object",:template_ref => "7723" })
+        resp = get('svp_get_player_code', :query => {:video_ref => ref_no ,:template_ref => "7723" })
         return resp
       end
 
