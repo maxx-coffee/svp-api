@@ -66,10 +66,6 @@ class Core
         return resp['response']['video_list']['video']['stream_name']
       end
 
-      def get_video_embed(ref_no)
-        resp = get('svp_get_player_code', :query =>{:video_ref => ref_no, :template_ref => "7723"})
-        return resp
-      end
 
       def start_record(ref_no)
         resp = get('svp_start_recording', :query => {:video_ref => ref_no})
