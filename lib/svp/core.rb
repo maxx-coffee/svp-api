@@ -41,7 +41,7 @@ class Core
       end
 
       def get_video(ref_no)
-        resp = get('svp_get_player_code', :query => {:video_ref => ref_no , :param_overrides => {:width = "947"} })
+        resp = get('svp_get_player_code', :query => {:video_ref => ref_no , :param_overrides => {:width => "947"} })
         return resp
       end
 
