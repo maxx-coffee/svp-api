@@ -40,7 +40,10 @@ class Core
         return resp
       end
 
-      
+      def create_broadcast
+        resp = get('svp_broadcast_feed', :query => {:whitelabel => "yes"})
+        return resp
+      end
 
       def start_broadcast(ref_no)
         resp = get('svp_start_broadcast', :query => {:video_ref => ref_no})
