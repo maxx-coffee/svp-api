@@ -40,13 +40,8 @@ class Core
         return resp
       end
 
-      def get_video(ref_no)
-        resp = get('svp_get_player_code', :query => {:video_ref => ref_no ,:embed_type => "object", :param_overrides => {:width => "947"} })
-        return resp
-      end
-
       def create_broadcast
-        resp = get('svp_broadcast_feed')
+        resp = get('svp_broadcast_feed', :query => {:whitelagel => "yes"})
         return resp
       end
 
