@@ -81,7 +81,7 @@ class Core
         resp = get('svp_set_video_property', :query => {:video_ref => ref_no, :property_id => prop_id, :new_value => new_val})
         return resp
       end
-
+      
   	  def get(method, opts={})
         opts[:query] ||= {}
         opts[:query].merge!(@default_query_opts)
