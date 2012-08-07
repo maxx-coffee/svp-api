@@ -77,8 +77,8 @@ class Core
         return resp
       end
 
-      def set_properties(ref_no, new_val)
-        resp = get('svp_set_video_property', :query => {:video_ref => ref_no, :property_id => "9", :new_value => new_val})
+      def set_properties(ref_no, new_val,prop_id)
+        resp = get('svp_set_video_property', :query => {:video_ref => ref_no, :property_id => prop_id, :new_value => new_val})
         return resp
       end
 
