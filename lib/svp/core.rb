@@ -41,7 +41,7 @@ class Core
       end
 
       def create_broadcast
-        resp = get('svp_broadcast_feed', :query => {:whitelagel => "yes"})
+        resp = get('svp_broadcast_feed', :query => {:whitelabel => "yes"})
         return resp
       end
 
