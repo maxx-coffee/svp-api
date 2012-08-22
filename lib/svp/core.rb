@@ -40,6 +40,11 @@ class Core
         return resp
       end
 
+      def mobile_embed(ref_no)
+        resp = get('svp_get_player_code', :query => {:video_ref => ref_no ,:template_ref => "8238"})
+        return resp
+      end
+
       def create_broadcast
         resp = get('svp_broadcast_feed', :query => {:whitelabel => "yes"})
         return resp
